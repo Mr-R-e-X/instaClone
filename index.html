@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instagram</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .status-bg-img {
+        background-image: url("./assets/storiesBorder.svg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .bg-img-profile {
+        background-image: url("./assets/storiesBorder.svg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-white flex flex-row relative font-roboto font-normal no-scrollbar min-w-[481px]"
+  >
+    <!-- Side Navigation bar -->
+    <section
+      id="sidebar"
+      class="h-screen min-w-max md:w-[20vw] border-r border-gray-300"
+    >
+      <div class="app-logo mt-12 mx-6 cursor-pointer">
+        <a href="#">
+          <img src="./assets/insta_logo.svg" alt="" class="hidden md:block" />
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/1077/1077042.png"
+            alt=""
+            class="h-[30px] w-[30px] object-cover object-center md:hidden"
+          />
+        </a>
+      </div>
+      <div class="nav-item mt-3">
+        <ul class="flex flex-col align-middle justify-center">
+          <li class="flex flex-row mb-4 mx-6 p-1 align-middle cursor-pointer">
+            <img src="./assets/home.svg" alt="" />
+            <span class="ml-3 hidden md:block font-bold">Home</span>
+          </li>
+          <li class="flex flex-row mb-4 mx-6 p-1 align-middle cursor-pointer">
+            <img src="./assets/search.svg" alt="" />
+            <span class="ml-3 hidden md:block">Search</span>
+          </li>
+          <li class="flex flex-row mb-4 mx-6 p-1 align-middle cursor-pointer">
+            <img src="./assets/explore.svg" alt="" />
+            <span class="ml-3 hidden md:block">Explore</span>
+          </li>
+          <li class="flex flex-row mb-4 mx-6 p-1 align-middle cursor-pointer">
+            <img src="./assets/reels.svg" alt="" />
+            <span class="ml-3 hidden md:block">Reels</span>
+          </li>
+          <li class="flex flex-row mb-4 mx-6 p-1 align-middle cursor-pointer">
+            <img src="./assets/messenger.svg" alt="" />
+            <span class="ml-3 hidden md:block">Messeges</span>
+          </li>
+          <li class="flex flex-row mb-4 mx-6 p-1 align-middle cursor-pointer">
+            <img src="./assets/notification.svg" alt="" />
+            <span class="ml-3 hidden md:block">Notification</span>
+          </li>
+          <li class="flex flex-row mb-4 mx-6 p-1 align-middle cursor-pointer">
+            <img src="./assets/create.svg" alt="" />
+            <span class="ml-3 hidden md:block">Create</span>
+          </li>
+          <li class="flex flex-row mb-4 mx-6 p-1 align-middle cursor-pointer">
+            <img
+              src="./assets/profile.svg"
+              alt=""
+              class="rounded-full object-cover object-center"
+            />
+            <span class="ml-3 hidden md:block">Profile</span>
+          </li>
+          <li class="flex flex-row mb-4 mx-6 p-1 align-middle cursor-pointer">
+            <img src="./assets/more.svg" alt="" />
+            <span class="ml-3 hidden md:block">More</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section
+      id="main"
+      class="w-[calc(100vh - 100px)] h-screen overflow-y-scroll overflow-x-hidden lg:w-[50vw] no-scrollbar"
+    >
+      <div
+        id="status"
+        class="flex flex-row p-10 w-full justify-start font-normal text-base"
+      >
+        <div class="mx-auto">
+          <div class="flex flex-col justify-center items-center">
+            <div
+              class="status-bg-img w-[64px] h-[64px] flex flex-row justify-center items-center"
+            >
+              <img
+                src="https://scontent.cdninstagram.com/v/t39.30808-6/430818351_1034560898030450_5363521448821745273_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDI3eDE0Mjcuc2RyLmYzMDgwOCJ9&_nc_ht=scontent.cdninstagram.com&_nc_cat=102&_nc_ohc=kAFWB_EAt7YAb6FS2ni&edm=APs17CUAAAAA&ccb=7-5&ig_cache_key=MzMxNzcwOTkwMTI1NjkxNzE3OA%3D%3D.2-ccb7-5&oh=00_AfCxtz0_AUfCa4L_jqX2aWja0wUhSkneoIS33nl20jlpHg&oe=661FE4AE&_nc_sid=10d13b"
+                alt=""
+                height="64px"
+                width="64px"
+                class="rounded-full h-[64px] w-[64px] object-cover object-center p-1"
+              />
+            </div>
+            <div class="mx-auto text-center text-xs">
+              <p>Cristiano</p>
+            </div>
+          </div>
+        </div>
+        <div class="mx-auto">
+          <div class="flex flex-col justify-center items-center">
+            <div
+              class="status-bg-img w-[64px] h-[64px] flex flex-row justify-center items-center"
+            >
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtzB2iUUGecwIueImvjZMf6YQaV2O8AcTSE61zzv3Q1Q&s"
+                alt=""
+                height="64px"
+                width="64px"
+                class="rounded-full h-[64px] w-[64px] object-cover object-center p-1"
+              />
+            </div>
+            <div class="mx-auto text-center text-xs">
+              <p>liomessi</p>
+            </div>
+          </div>
+        </div>
+        <div class="mx-auto">
+          <div class="flex flex-col justify-center items-center">
+            <div
+              class="status-bg-img w-[64px] h-64px flex flex-row justify-center"
+            >
+              <img
+                src="https://cdn.britannica.com/48/252748-050-C514EFDB/Virat-Kohli-India-celebrates-50th-century-Cricket-November-15-2023.jpg"
+                alt=""
+                height="64px"
+                width="64px"
+                class="rounded-full h-[64px] w-[64px] object-cover object-center p-1"
+              />
+            </div>
+            <div class="mx-auto text-center text-xs">
+              <p>Virat</p>
+            </div>
+          </div>
+        </div>
+        <div class="mx-auto">
+          <div class="flex flex-col justify-center items-center">
+            <div
+              class="status-bg-img w-[64px] h-[64px] flex flex-row justify-center items-center"
+            >
+              <img
+                src="https://images.moneycontrol.com/static-mcnews/2024/04/MixCollage-12-Apr-2024-02-42-PM-2051-770x433.jpg?impolicy=website&width=770&height=431"
+                alt=""
+                height="64px"
+                width="64px"
+                class="rounded-full h-[64px] w-[64px] object-cover object-center p-1"
+              />
+            </div>
+            <div class="mx-auto text-center text-xs">
+              <p>mahi7781</p>
+            </div>
+          </div>
+        </div>
+        <div class="mx-auto">
+          <div class="flex flex-col justify-center items-center">
+            <div class="status-bg-img w-16 h-auto flex flex-row justify-center">
+              <img
+                src="https://cdn.britannica.com/47/188747-050-1D34E743/Bill-Gates-2011.jpg"
+                alt=""
+                height="64px"
+                width="64px"
+                class="rounded-full h-[64px] w-[64px] object-cover object-center p-1"
+              />
+            </div>
+            <div class="mx-auto text-center text-xs">
+              <p>thisisbillgates</p>
+            </div>
+          </div>
+        </div>
+        <div class="mx-auto">
+          <div class="flex flex-col justify-center items-center">
+            <div
+              class="status-bg-img w-[64px] h-[64px] flex flex-row justify-center items-center"
+            >
+              <img
+                src="https://media.wired.com/photos/650399af65d83ff288720473/1:1/w_1285,h_1285,c_limit/If-Elon-Musk-Had-Been-a-Happy-Child,-Would-He-Still-Be-Launching-Rockets--Business-Redux-h_16082330.jpg"
+                alt=""
+                height="64px"
+                width="64px"
+                class="rounded-full h-[64px] w-[64px] object-cover object-center p-1"
+              />
+            </div>
+            <div class="max-auto text-center text-xs">
+              <p>elonmuskxspac</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-4/5 min-w-[300px] mx-auto border-b-2 border-gray-200">
+        <div class="flex flex-row justify-between items-center">
+          <div class="flex flex-row justify-start items-center">
+            <div class="bg-img-profile h-[58px] w-[58px]">
+              <img
+                src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcRq5j4qIRXtl0EmLM7gL6-iDeYKU4sqx6bFw-wU3ZOz4hv5GSc1ZaqA8P1XlsWnvTZx-hBH4MzI4wQAqY0"
+                alt=""
+                class="h-[58px] w-[58px] rounded-full object-cover object-center p-1"
+              />
+            </div>
+            <p class="font-semibold mx-2">leomessi</p>
+            <div class="mx-1">
+              <img
+                src="./assets/bluetick.svg"
+                alt=""
+                class="h-[12px] w-[12px]"
+              />
+            </div>
+            <div class="mx-1">
+              <img
+                src="https://cdn-icons-png.flaticon.com/128/5720/5720434.png"
+                alt=""
+                height="5px"
+                width="5px"
+                class="scale-125"
+              />
+            </div>
+            <p class="text-gray-400">5h</p>
+          </div>
+          <div class="flex items-center">
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/2311/2311523.png"
+              alt=""
+              class="h-[24px] w-[24px] object-cover object-center p-1"
+            />
+          </div>
+        </div>
+        <div class="mt-2 overflow-hidden rounded-md">
+          <img
+            src="https://www.investopedia.com/thmb/ckPwC5ARwco1nOSCKVGE57se8MI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1245748917-99e3329a7b8147e8ab648806220ce153.jpg"
+            alt=""
+            class="object-cover object-center transition ease-in-out hover:scale-105 duration-500"
+          />
+        </div>
+        <div class="mt-2 flex flex-row justify-between items-center">
+          <div class="flex flex-row justify-start items-center">
+            <img src="./assets/like.svg" alt="" class="mr-2" />
+            <img src="./assets/comment.svg" alt="" class="mx-2" />
+            <img src="./assets/share.svg" alt="" class="mx-2" />
+          </div>
+          <div class="flex items-center">
+            <img src="./assets/bookmark.svg" alt="" />
+          </div>
+        </div>
+        <div class="mt-2">
+          <p class="font-semibold">741,368 likes</p>
+          <p>
+            <span class="font-semibold">leomessi</span> Lorem ipsum dolor sit
+            amet consectetur.
+          </p>
+          <p class="font-semibold">See translation</p>
+          <p class="text-gray-400">Vew all 984,377 comments</p>
+        </div>
+        <div class="my-4 flex flex-row justify-between items-center">
+          <div>
+            <p>Add a comment...</p>
+          </div>
+          <div>
+            <img src="./assets/emoji.svg" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="w-4/5 mt-4 min-w-[300px] mx-auto border-b-2 border-gray-200">
+        <div class="flex flex-row justify-between items-center">
+          <div class="flex flex-row justify-start items-center">
+            <div class="bg-img-profile h-[58px] w-[58px]">
+              <img
+                src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcQlj3rCfLHry58AtJ8ZyBEAFPtChMddDSUSjt7C7nV3Nhsni9RIx5b0-n7LxfgerrPS6b-P-u3BOM3abuY"
+                alt=""
+                class="h-[58px] w-[58px] rounded-full object-cover object-center p-1"
+              />
+            </div>
+            <p class="font-semibold mx-2">cristiano</p>
+            <div class="mx-1">
+              <img
+                src="./assets/bluetick.svg"
+                alt=""
+                class="h-[12px] w-[12px]"
+              />
+            </div>
+            <div class="mx-1">
+              <img
+                src="https://cdn-icons-png.flaticon.com/128/5720/5720434.png"
+                alt=""
+                height="5px"
+                width="5px"
+                class="scale-125"
+              />
+            </div>
+            <p class="text-gray-400">6h</p>
+          </div>
+          <div class="flex items-center">
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/2311/2311523.png"
+              alt=""
+              class="h-[24px] w-[24px] object-cover object-center p-1"
+            />
+          </div>
+        </div>
+        <div class="mt-2 overflow-hidden rounded-md">
+          <img
+            src="https://tmssl.akamaized.net/images/foto/galerie/ronaldo-cristiano-2017-real-madrid-ballon-d-or-2016-0026751808hjpg-1698686328-120749.jpg?lm=1698686338"
+            alt=""
+            class="object-cover object-center transition ease-in-out hover:scale-105 duration-500"
+          />
+        </div>
+        <div class="mt-2 flex flex-row justify-between items-center">
+          <div class="flex flex-row justify-start items-center">
+            <img src="./assets/like.svg" alt="" class="mr-2" />
+            <img src="./assets/comment.svg" alt="" class="mx-2" />
+            <img src="./assets/share.svg" alt="" class="mx-2" />
+          </div>
+          <div class="flex items-center">
+            <img src="./assets/bookmark.svg" alt="" />
+          </div>
+        </div>
+        <div class="mt-2">
+          <p class="font-semibold">941,648 likes</p>
+          <p>
+            <span class="font-semibold">leomessi</span> Lorem ipsum dolor sit
+            amet consectetur.
+          </p>
+          <p class="font-semibold">See translation</p>
+          <p class="text-gray-400">Vew all 998,457 comments</p>
+        </div>
+        <div class="my-4 flex flex-row justify-between items-center">
+          <div>
+            <p>Add a comment...</p>
+          </div>
+          <div>
+            <img src="./assets/emoji.svg" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="w-4/5 mt-4 min-w-[300px] mx-auto border-b-2 border-gray-200">
+        <div class="flex flex-row justify-between items-center">
+          <div class="flex flex-row justify-start items-center">
+            <div class="bg-img-profile h-[58px] w-[58px]">
+              <img
+                src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcQbkHK_p3JYQQh9rJJZ--pG4Gb_96hT7NYlhooBQmSVNdxAYj2o3uYE13PVP6KDOdUDi1Wx9q4vz0wPPQQ"
+                alt=""
+                class="h-[58px] w-[58px] rounded-full object-cover object-center p-1"
+              />
+            </div>
+            <p class="font-semibold mx-2">sergioramos</p>
+            <div class="mx-1">
+              <img
+                src="./assets/bluetick.svg"
+                alt=""
+                class="h-[12px] w-[12px]"
+              />
+            </div>
+            <div class="mx-1">
+              <img
+                src="https://cdn-icons-png.flaticon.com/128/5720/5720434.png"
+                alt=""
+                height="5px"
+                width="5px"
+                class="scale-125"
+              />
+            </div>
+            <p class="text-gray-400">6h</p>
+          </div>
+          <div class="flex items-center">
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/2311/2311523.png"
+              alt=""
+              class="h-[24px] w-[24px] object-cover object-center p-1"
+            />
+          </div>
+        </div>
+        <div class="mt-2 rounded-md overflow-hidden">
+          <img
+            src="https://images2.minutemediacdn.com/image/upload/c_fill,w_1440,ar_16:9,f_auto,q_auto,g_auto/shape/cover/sport/b41529a79582f6ed1845eaf23403c5e6be74402f64145e201cb1c6976be7e795.jpg"
+            alt=""
+            class="object-cover object-center transition ease-in-out hover:scale-105 duration-500"
+          />
+        </div>
+        <div class="mt-2 flex flex-row justify-between items-center">
+          <div class="flex flex-row justify-start items-center">
+            <img src="./assets/like.svg" alt="" class="mr-2" />
+            <img src="./assets/comment.svg" alt="" class="mx-2" />
+            <img src="./assets/share.svg" alt="" class="mx-2" />
+          </div>
+          <div class="flex items-center">
+            <img src="./assets/bookmark.svg" alt="" />
+          </div>
+        </div>
+        <div class="mt-2">
+          <p class="font-semibold">541,368 likes</p>
+          <p>
+            <span class="font-semibold">sergioramos</span> Lorem ipsum dolor sit
+            amet consectetur.
+          </p>
+          <p class="font-semibold">See translation</p>
+          <p class="text-gray-400">Vew all 384,377 comments</p>
+        </div>
+        <div class="my-4 flex flex-row justify-between items-center">
+          <div>
+            <p>Add a comment...</p>
+          </div>
+          <div>
+            <img src="./assets/emoji.svg" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="w-4/5 mt-4 min-w-[300px] mx-auto border-b-2 border-gray-200">
+        <div class="flex flex-row justify-between items-center">
+          <div class="flex flex-row justify-start items-center">
+            <div class="bg-img-profile h-[58px] w-[58px]">
+              <img
+                src="https://img.bleacherreport.net/img/images/photos/003/701/847/hi-res-c834ba050d9e72e90eca37c6b08b6fc5_crop_north.jpg?1508166325&w=3072&h=2048"
+                alt=""
+                class="h-[58px] w-[58px] rounded-full object-cover object-center p-1"
+              />
+            </div>
+            <p class="font-semibold mx-2">kaka</p>
+            <div class="mx-1">
+              <img
+                src="./assets/bluetick.svg"
+                alt=""
+                class="h-[12px] w-[12px]"
+              />
+            </div>
+            <div class="mx-1">
+              <img
+                src="https://cdn-icons-png.flaticon.com/128/5720/5720434.png"
+                alt=""
+                height="5px"
+                width="5px"
+                class="scale-125"
+              />
+            </div>
+            <p class="text-gray-400">7h</p>
+          </div>
+          <div class="flex items-center">
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/2311/2311523.png"
+              alt=""
+              class="h-[24px] w-[24px] object-cover object-center p-1"
+            />
+          </div>
+        </div>
+        <div class="mt-2 overflow-hidden rounded-md">
+          <img
+            src="https://images.hindustantimes.com/rf/image_size_800x600/HT/p2/2016/05/27/Pictures/_3c603bc6-23fb-11e6-bd64-8acd98c1ae00.jpg"
+            alt=""
+            class="object-cover object-center transition ease-in-out hover:scale-105 duration-500"
+          />
+        </div>
+        <div class="mt-2 flex flex-row justify-between items-center">
+          <div class="flex flex-row justify-start items-center">
+            <img src="./assets/like.svg" alt="" class="mr-2" />
+            <img src="./assets/comment.svg" alt="" class="mx-2" />
+            <img src="./assets/share.svg" alt="" class="mx-2" />
+          </div>
+          <div class="flex items-center">
+            <img src="./assets/bookmark.svg" alt="" />
+          </div>
+        </div>
+        <div class="mt-2 overflow-hidden rounded-md">
+          <p class="font-semibold">441,358 likes</p>
+          <p>
+            <span class="font-semibold">leomessi</span> Lorem ipsum dolor sit
+            amet consectetur.
+          </p>
+          <p class="font-semibold">See translation</p>
+          <p class="text-gray-400">Vew all 841,327 comments</p>
+        </div>
+        <div class="my-4 flex flex-row justify-between items-center">
+          <div>
+            <p>Add a comment...</p>
+          </div>
+          <div>
+            <img src="./assets/emoji.svg" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="w-4/5 mt-4 min-w-[300px] mx-auto border-b-2 border-gray-200">
+        <div class="flex flex-row justify-between items-center">
+          <div class="flex flex-row justify-start items-center">
+            <div class="bg-img-profile h-[58px] w-[58px]">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT58NLVfkAjpw82I9TU_TvWz0iQUBpB66CURQ&s"
+                alt=""
+                class="h-[58px] w-[58px] rounded-full object-cover object-center p-1"
+              />
+            </div>
+            <p class="font-semibold mx-2">bekham</p>
+            <div class="mx-1">
+              <img
+                src="./assets/bluetick.svg"
+                alt=""
+                class="h-[12px] w-[12px]"
+              />
+            </div>
+            <div class="mx-1">
+              <img
+                src="https://cdn-icons-png.flaticon.com/128/5720/5720434.png"
+                alt=""
+                height="5px"
+                width="5px"
+                class="scale-125"
+              />
+            </div>
+            <p class="text-gray-400">9h</p>
+          </div>
+          <div class="flex items-center">
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/2311/2311523.png"
+              alt=""
+              class="h-[24px] w-[24px] object-cover object-center p-1"
+            />
+          </div>
+        </div>
+        <div class="mt-2 overflow-hidden rounded-md">
+          <img
+            src="https://static.independent.co.uk/2021/05/20/13/GettyImages-1345073.jpg"
+            alt=""
+            class="object-cover object-center transition ease-in-out hover:scale-105 duration-500"
+          />
+        </div>
+        <div class="mt-2 flex flex-row justify-between items-center">
+          <div class="flex flex-row justify-start items-center">
+            <img src="./assets/like.svg" alt="" class="mr-2" />
+            <img src="./assets/comment.svg" alt="" class="mx-2" />
+            <img src="./assets/share.svg" alt="" class="mx-2" />
+          </div>
+          <div class="flex items-center">
+            <img src="./assets/bookmark.svg" alt="" />
+          </div>
+        </div>
+        <div class="mt-2 overflow-hidden rounded-md">
+          <p class="font-semibold">641,368 likes</p>
+          <p>
+            <span class="font-semibold">leomessi</span> Lorem ipsum dolor sit
+            amet consectetur.
+          </p>
+          <p class="font-semibold">See translation</p>
+          <p class="text-gray-400">Vew all 782,402 comments</p>
+        </div>
+        <div class="my-4 flex flex-row justify-between items-center">
+          <div>
+            <p>Add a comment...</p>
+          </div>
+          <div>
+            <img src="./assets/emoji.svg" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="w-4/5 mt-4 min-w-[300px] mx-auto border-b-2 border-gray-200">
+        <div class="flex flex-row justify-between items-center">
+          <div class="flex flex-row justify-start items-center">
+            <div class="bg-img-profile h-[58px] w-[58px]">
+              <img
+                src="https://images.news18.com/ibnlive/uploads/2023/03/virat-kohli-took-the-helmet-off-and-soaked-it-all-in-ap-photo.jpg?impolicy=website&width=640&height=480"
+                alt=""
+                class="h-[58px] w-[58px] rounded-full object-cover object-center p-1"
+              />
+            </div>
+            <p class="font-semibold mx-2">virat</p>
+            <div class="mx-1">
+              <img
+                src="./assets/bluetick.svg"
+                alt=""
+                class="h-[12px] w-[12px]"
+              />
+            </div>
+            <div class="mx-1">
+              <img
+                src="https://cdn-icons-png.flaticon.com/128/5720/5720434.png"
+                alt=""
+                height="5px"
+                width="5px"
+                class="scale-125"
+              />
+            </div>
+            <p class="text-gray-400">9h</p>
+          </div>
+          <div class="flex items-center">
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/2311/2311523.png"
+              alt=""
+              class="h-[24px] w-[24px] object-cover object-center p-1"
+            />
+          </div>
+        </div>
+        <div class="mt-2 overflow-hidden rounded-md">
+          <img
+            src="https://static.tnn.in/thumb/msid-106703916,thumbsize-54810,width-1280,height-720,resizemode-75/106703916.jpg"
+            alt=""
+            class="object-cover object-center transition ease-in-out hover:scale-105 duration-500"
+          />
+        </div>
+        <div class="mt-2 flex flex-row justify-between items-center">
+          <div class="flex flex-row justify-start items-center">
+            <img src="./assets/like.svg" alt="" class="mr-2" />
+            <img src="./assets/comment.svg" alt="" class="mx-2" />
+            <img src="./assets/share.svg" alt="" class="mx-2" />
+          </div>
+          <div class="flex items-center">
+            <img src="./assets/bookmark.svg" alt="" />
+          </div>
+        </div>
+        <div class="mt-2 overflow-hidden rounded-md">
+          <p class="font-semibold">999,368 likes</p>
+          <p>
+            <span class="font-semibold">leomessi</span> Lorem ipsum dolor sit
+            amet consectetur.
+          </p>
+          <p class="font-semibold">See translation</p>
+          <p class="text-gray-400">Vew all 995,552 comments</p>
+        </div>
+        <div class="my-4 flex flex-row justify-between items-center">
+          <div>
+            <p>Add a comment...</p>
+          </div>
+          <div>
+            <img src="./assets/emoji.svg" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="w-4/5 mt-4 min-w-[300px] mx-auto border-b-2 border-gray-200">
+        <div class="flex flex-row justify-between items-center">
+          <div class="flex flex-row justify-start items-center">
+            <div class="bg-img-profile h-[58px] w-[58px]">
+              <img
+                src="https://images.news18.com/ibnlive/uploads/2023/05/will-ipl-2023-be-ms-dhonis-last-season.jpg"
+                alt=""
+                class="h-[58px] w-[58px] rounded-full object-cover object-center p-1"
+              />
+            </div>
+            <p class="font-semibold mx-2">mahi7781</p>
+            <div class="mx-1">
+              <img
+                src="./assets/bluetick.svg"
+                alt=""
+                class="h-[12px] w-[12px]"
+              />
+            </div>
+            <div class="mx-1">
+              <img
+                src="https://cdn-icons-png.flaticon.com/128/5720/5720434.png"
+                alt=""
+                height="5px"
+                width="5px"
+                class="scale-125"
+              />
+            </div>
+            <p class="text-gray-400">9h</p>
+          </div>
+          <div class="flex items-center">
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/2311/2311523.png"
+              alt=""
+              class="h-[24px] w-[24px] object-cover object-center p-1"
+            />
+          </div>
+        </div>
+        <div class="mt-2 overflow-hidden rounded-md">
+          <img
+            src="https://images.news18.com/ibnlive/uploads/2023/05/will-ipl-2023-be-ms-dhonis-last-season.jpg"
+            alt=""
+            class="object-cover object-center transition ease-in-out hover:scale-105 duration-500"
+          />
+        </div>
+        <div class="mt-2 flex flex-row justify-between items-center">
+          <div class="flex flex-row justify-start items-center">
+            <img src="./assets/like.svg" alt="" class="mr-2" />
+            <img src="./assets/comment.svg" alt="" class="mx-2" />
+            <img src="./assets/share.svg" alt="" class="mx-2" />
+          </div>
+          <div class="flex items-center">
+            <img src="./assets/bookmark.svg" alt="" />
+          </div>
+        </div>
+        <div class="mt-2 overflow-hidden rounded-md">
+          <p class="font-semibold">881,969 likes</p>
+          <p>
+            <span class="font-semibold">leomessi</span> Lorem ipsum dolor sit
+            amet consectetur.
+          </p>
+          <p class="font-semibold">See translation</p>
+          <p class="text-gray-400">Vew all 934,537 comments</p>
+        </div>
+        <div class="my-4 flex flex-row justify-between items-center">
+          <div>
+            <p>Add a comment...</p>
+          </div>
+          <div>
+            <img src="./assets/emoji.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      class="hidden lg:block lg:w-[30vw] lg:h-screen lg:p-8"
+      id="profile"
+    >
+      <div class="mt-10 flex flex-row justify-between items-center">
+        <div class="flex flex-row justify-start">
+          <div>
+            <img
+              src="./assets/profile.svg"
+              alt=""
+              height="65px"
+              width="65px"
+              class="rounded-full"
+            />
+          </div>
+          <div class="flex flex-col justify-center items-start ml-3">
+            <p class="text-start font-semibold">upvox_</p>
+            <p class="text-start text-gray-500">Upvox</p>
+          </div>
+        </div>
+        <div>
+          <p class="text-blue-500 font-semibold">Switch</p>
+        </div>
+      </div>
+      <div class="flex flex-row justify-between items-center mt-4">
+        <p class="text-start text-gray-500 font-semibold">
+          Suggestions for you
+        </p>
+        <p class="text-start font-semibold text-xs">See All</p>
+      </div>
+      <div class="mt-4 flex flex-row justify-between items-center">
+        <div class="flex flex-row justify-start">
+          <div>
+            <img
+              src="./assets/other_profile_pic.svg"
+              alt=""
+              height="45px"
+              width="45px"
+              class="rounded-full"
+            />
+          </div>
+          <div class="flex flex-col justify-center items-start ml-3">
+            <p class="text-start text-sm font-semibold">imkir</p>
+            <p class="text-start text-gray-500 text-xs">Follows you</p>
+          </div>
+        </div>
+        <div>
+          <p class="text-blue-500 font-semibold">Follow</p>
+        </div>
+      </div>
+      <div class="mt-4 flex flex-row justify-between items-center">
+        <div class="flex flex-row justify-start">
+          <div>
+            <img
+              src="./assets/other_profile_pic.svg"
+              alt=""
+              height="45px"
+              width="45px"
+              class="rounded-full"
+            />
+          </div>
+          <div class="flex flex-col justify-center items-start ml-3">
+            <p class="text-start text-sm font-semibold">organic_al</p>
+            <p class="text-start text-gray-500 text-xs">
+              Followed by chirag_singla17
+            </p>
+          </div>
+        </div>
+        <div>
+          <p class="text-blue-500 font-semibold">Follow</p>
+        </div>
+      </div>
+      <div class="mt-4 flex flex-row justify-between items-center">
+        <div class="flex flex-row justify-start">
+          <div>
+            <img
+              src="./assets/other_profile_pic.svg"
+              alt=""
+              height="45px"
+              width="45px"
+              class="rounded-full"
+            />
+          </div>
+          <div class="flex flex-col justify-center items-start ml-3">
+            <p class="text-start text-sm font-semibold">im_gr</p>
+            <p class="text-start text-gray-500 text-xs">
+              Followed by chirag_singla17
+            </p>
+          </div>
+        </div>
+        <div>
+          <p class="text-blue-500 font-semibold">Follow</p>
+        </div>
+      </div>
+      <div class="mt-4 flex flex-row justify-between items-center">
+        <div class="flex flex-row justify-start">
+          <div>
+            <img
+              src="./assets/other_profile_pic.svg"
+              alt=""
+              height="45px"
+              width="45px"
+              class="rounded-full"
+            />
+          </div>
+          <div class="flex flex-col justify-center items-start ml-3">
+            <p class="text-start text-sm font-semibold">abh952</p>
+            <p class="text-start text-gray-500 text-xs">Follows you</p>
+          </div>
+        </div>
+        <div>
+          <p class="text-blue-500 font-semibold">Follow</p>
+        </div>
+      </div>
+      <div class="mt-4 flex flex-row justify-between items-center">
+        <div class="flex flex-row justify-start">
+          <div>
+            <img
+              src="./assets/other_profile_pic.svg"
+              alt=""
+              height="45px"
+              width="45px"
+              class="rounded-full"
+            />
+          </div>
+          <div class="flex flex-col justify-center items-start ml-3">
+            <p class="text-start text-sm font-semibold">skbrl</p>
+            <p class="text-start text-gray-500 text-xs">Follows you</p>
+          </div>
+        </div>
+        <div>
+          <p class="text-blue-500 font-semibold">Follow</p>
+        </div>
+      </div>
+      <div class="mt-4 flex flex-col justify-center items-start">
+        <ul
+          class="flex flex-row justify-start items-center text-gray-400 text-xs flex-wrap"
+        >
+          <li class="p-1">About</li>
+          <li>
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/5720/5720434.png"
+              alt=""
+              height="3px"
+              width="3px"
+              class="scale-125"
+            />
+          </li>
+          <li class="p-1">Help</li>
+          <li>
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/5720/5720434.png"
+              alt=""
+              height="3px"
+              width="3px"
+              class="scale-125"
+            />
+          </li>
+          <li class="p-1">Press</li>
+          <li>
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/5720/5720434.png"
+              alt=""
+              height="3px"
+              width="3px"
+              class="scale-125"
+            />
+          </li>
+          <li class="p-1">API</li>
+          <li>
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/5720/5720434.png"
+              alt=""
+              height="3px"
+              width="3px"
+              class="scale-125"
+            />
+          </li>
+          <li class="p-1">Jobs</li>
+          <li>
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/5720/5720434.png"
+              alt=""
+              height="3px"
+              width="3px"
+              class="scale-125"
+            />
+          </li>
+          <li class="p-1">Privacy</li>
+          <li>
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/5720/5720434.png"
+              alt=""
+              height="3px"
+              width="3px"
+              class="scale-125"
+            />
+          </li>
+          <li class="p-1">Terms</li>
+          <li>
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/5720/5720434.png"
+              alt=""
+              height="3px"
+              width="3px"
+              class="scale-125"
+            />
+          </li>
+          <li class="p-1">Locations</li>
+          <li>
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/5720/5720434.png"
+              alt=""
+              height="3px"
+              width="3px"
+              class="scale-125"
+            />
+          </li>
+          <li class="p-1">Language</li>
+          <li>
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/5720/5720434.png"
+              alt=""
+              height="3px"
+              width="3px"
+              class="scale-125"
+            />
+          </li>
+          <li class="p-1">Meta Verified</li>
+        </ul>
+        <p class="text-gray-400 text-sm mt-4">© 2023 Instagram from Meta</p>
+      </div>
+    </section>
+  </body>
+</html>
